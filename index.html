@@ -2,8 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AR Slider Puzzle</title>
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Slider Puzzle with AR</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- place A-Frame script here -->
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <!-- place AR.js script here -->
@@ -11,7 +14,7 @@
   </head>
   <body>
       <button class="takePhoto">Take Photo</button>
-      <a-scene embedded arjs='detectionMode: nono_andmatrix; matrixCodeType:3x3'>
+      <a-scene embedded arjs='trackingMethod: best; detectionMode: nono_and_matrix; matrixCodeType:3x3'>
           <a-marker type='barcode' value='1'></a-marker>
           <a-marker type='barcode' value='2'></a-marker>
           <a-marker type='barcode' value='3'></a-marker>
